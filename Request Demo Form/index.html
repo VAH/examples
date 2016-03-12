@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel='stylesheet' type='text/css' href='style.css' />
+		<link rel='stylesheet' type='text/css' href='font-awesome-4.5.0/css/font-awesome.min.css' />
+	</head>
+
+	<body>
+
+		<form id='form' method='POST'>
+			<header>request a demo</header>
+
+			<div class='row'>
+				<div class='control-group'>
+					<input id='first-name' type='text' name='form_data[first_name]' required />
+					<label for='first-name'>First Name</label>
+				</div>
+
+				<div class='control-group'>
+					<input id='last-name' type='text' name='form_data[last_name]' required />
+					<label for='last-name'>Last Name</label>
+				</div>
+			</div>
+
+			<div class='row'>
+				<div class='control-group'>
+					<input id='email' type='email' name='form_data[email]' required />
+					<label for='email'>Email *</label>
+				</div>
+
+				<div id='phone-group' class='control-group'>
+					<input id='country' type='tel' size='3' class='phone-country' name='form_data[phone][country]' />
+					<input id='code' type='tel' size='3' class='phone-code' name='form_data[phone][code]' />
+					<input id='number' type='tel' size='4' class='phone-number' name='form_data[phone][number]' />
+					<label for='phone-country' class='phone-title'>Phone Number</label>
+				</div>
+			</div>
+
+			<div class='row'>
+				<div class='control-group'>
+					<input id='organization' type='text' name='form_data[school_organization]' required />
+					<label for='organization'>School/Organization *</label>
+				</div>
+				<div class='control-group'>
+					<input id='role' type='text' name='form_data[role]' required />
+					<label for='role'>Role on Campus *</label>
+				</div>
+			</div>
+
+			<div class='row'>
+				<div class='goal-group'>
+					<textarea id='goal' type='area' name='form_data[goals]' col='100' rows='10' required></textarea>
+					<label for='goal'>What are your goals for DemoSystem? *</label>
+				</div>
+			</div>
+			<div class='agreement-row'>
+				<input id='agreement-box' type='checkbox' required />
+			 	<label class='agreement-text'>
+					I agree to the DemoSystem <span style='color:white'>Terms of Service </span> and <span style='color:white'>Privacy Policy</span>
+				</label>
+			</div>
+
+			<div>
+				<input type='submit' value='Submit' />
+				<input id='reset' type='reset' value='Cancel'/>
+			</div>
+
+		</form>
+
+
+		<script src='jquery-1.12.1.min.js'></script>
+		<script src='validation.js'></script>
+	</body>
+
+</html>

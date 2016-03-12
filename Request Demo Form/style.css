@@ -1,0 +1,268 @@
+@font-face {
+    font-family: "monserrat-regular";
+    src: url("fonts/Montserrat-Regular.otf");
+}
+
+@font-face {
+    font-family: "myriadpro-regular";
+    src: url("fonts/MyriadPro-Regular.otf");
+}
+
+@font-face {
+    font-family: "lato-regular";
+    src: url("fonts/Lato-Regular.ttf");
+}
+
+
+body {
+	margin: 0;
+	background: #565656;
+}
+
+form {
+	display: block;
+	width: 636px;
+	padding: 37px 84px 59px 87px;
+	margin: 100px auto 0 auto;
+	box-sizing: border-box;
+	background: #27292b;
+}
+
+header {
+	color: white;
+	font-size: 29px;
+	font-family: monserrat-regular; 
+	text-transform: uppercase;
+}
+
+header:after {
+	content: ' ';
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 36px;
+	border: 1px solid #47494b;
+}
+
+
+.row {
+	margin-bottom: 44px;
+}
+
+.row div:first-child {
+	margin-right: 10px;
+}
+
+.row:after {
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.goal-group {
+	width: 100%;
+}
+
+.goal-group,
+.control-group {
+	display: inline-table;
+}
+
+label {
+	display: table-header-group;
+	color:  #47494b;
+	font-size: 13px;
+	font-family: lato-regular; 
+}
+
+textarea,
+input[type="tel"], 
+input[type="text"], 
+input[type="email"], 
+input[type="reset"],
+input[type="submit"] {
+	display: table-row-group; 
+	box-sizing: border-box;
+	color: white;
+	border: none;
+	background: none;
+	border-radius: 3px;
+	font-family: lato-regular; 
+}
+
+input:focus + label,
+textarea:focus + label,
+input[type="tel"]:focus + input + label,
+input[type="tel"]:focus + input + input + label { 
+	color:white;
+}
+
+/*BUTTONS--------------------------------------------------------*/
+
+input[type="reset"],
+input[type="submit"] {
+	width: 127px;
+	height: 39px;
+}
+
+input[type="submit"] {
+	background-color: #5d9f81; 
+}
+
+input[type="submit"]:hover {
+	background-color: #40B580;
+}
+
+input[type="reset"] {
+	margin-left: 18px;
+	color: #47494b;
+	border: 1px solid #47494b;
+	background-color: 0 none; 
+}
+
+input[type="reset"]:hover {
+	color: white;
+	background-color: #e7635e;
+}
+
+input[type="reset"]:active,
+input[type="reset"]:focus {
+	border-color: #e7635e;
+}
+
+/*PHONE----------------------------------------*/
+
+#phone-group input[type="tel"] {
+	display: inline-block;
+}
+
+input[type="tel"].phone-code,
+input[type="tel"].phone-country {
+	width: 63px;
+	margin-right: 5px;
+}
+input[type="tel"].phone-number {
+	width: 90px;
+}
+
+/*AGREEMENT--------------------------------------------------------*/
+
+.agreement-row {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+#agreement-box {
+    position: absolute;
+}
+
+.agreement-text {
+	display: block;
+	padding-left: 20px;
+    line-height: 19px;
+}
+
+/*BUTTONS--------------------------------------------------------*/
+
+textarea, 
+input[type="email"],
+input[type="tel"],
+input[type="text"] {
+	display: block;
+	padding: 13px;
+	margin-top: 3px;
+	border: 1px solid #47494b;
+}
+
+input[type="email"],
+input[type="text"] {
+	width: 225px;
+	height: 42px;
+}
+
+textarea {
+	display: block;
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 156px;
+	resize: none;
+}
+
+textarea:focus,
+input:focus {
+	outline: none;
+	border-color: white;
+}
+
+/*VALIDATION-----------------------------------------*/
+
+input.invalid,
+textarea.invalid,
+#phone-group.invalid input {
+	color: white;
+	border-color: #e7635e;
+}
+#phone-group.invalid label,
+input + label.invalid,
+textarea + label.invalid { 
+	color: #e7635e;
+}
+
+input.valid,
+input + label.valid,
+textarea.valid,
+textarea + label.valid,
+#phone-group.valid label,
+#phone-group.valid input { 
+	color: #6abd97;
+	border-color: #6abd97;
+}
+
+input:focus - label {
+
+}
+
+/*MEDIA----------------------------------------------*/
+
+@media only screen and (max-width : 636px) {
+	.row {
+		margin-bottom: 0px;
+	}
+
+	.agreement-row {
+		margin-bottom: 20px;
+	}
+
+	.goal-group,
+	.control-group {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	textarea,
+	input[type="email"],
+	input[type="text"],
+	input[type="reset"],
+	input[type="submit"] {
+		width: 100%;
+		display: block;
+	}
+
+	input[type="submit"] {
+		margin-bottom: 11px;
+	}
+	
+	input[type="reset"] {
+		margin-left: 0px;
+	}
+   
+	form {
+		width: 356px;
+		padding: 40px 20px 20px 20px;
+	}
+
+	header:after {
+		margin-bottom: 26px;
+	}
+}
+
+
